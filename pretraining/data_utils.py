@@ -362,6 +362,22 @@ if __name__ == '__main__':
                         count, texts = 0, []
         if texts:
             yield texts
+            
+    # def some_texts():
+    #     filename = './data/leida/content.txt'
+    #     f = open(filename,'r',encoding='utf-8')
+    #     count, texts = 0, []
+    #     for l in f.readlines():
+    #         l = l.strip()
+    #         if not l:
+    #             continue
+    #         texts.extend(re.findall(u'.*?[\n。.]+', l))
+    #         count += 1
+    #         if count == 10:  # 10篇文章合在一起再处理
+    #             yield texts
+    #             count, texts = 0, []
+    #     if texts:
+    #         yield texts
 
     assert model in ['roberta', 'gpt', 'unilm']  # 判断是否支持的模型类型
 
